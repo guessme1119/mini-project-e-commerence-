@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEEL - Luxury E-Commerce Store</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-text">FEEL</span>
+                <span class="logo-diamond">◆</span>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="nav-link active">Home</a>
+                <a href="{{ url_for('about') }}" class="nav-link">About</a>
+                <a href="{{ url_for('cart') }}" class="nav-link cart-link">Cart</a>
+                <span class="cart-count" id="cartCount">0</span>
+                
+                {% if 'loggedin' in session %}
+                    <a href="{{ url_for('logout') }}" class="nav-link logout">Logout</a>
+                {% else %}
+                    <a href="{{ url_for('login') }}" class="nav-link">Login</a>
+                {% endif %}
+            </div>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search luxury items...">
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+                <option value="accessories">Accessories</option>
+                <option value="jewelry">Jewelry</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Luxury Shopping Experience</h1>
+            <p>Discover our curated collection of premium products</p>
+        </section>
+        <section id="products" class="products-grid"></section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About FEEL</h3>
+                <p>Luxury shopping redefined for the modern connoisseur.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: support@feel.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 FEEL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="static/main.js"></script>
+</body>
+</html>
