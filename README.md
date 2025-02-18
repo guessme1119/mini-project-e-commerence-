@@ -1,2 +1,3 @@
-# mini-project-![Uploading Screenshot 2025-02-17 175647.png…]()
-![Screenshot 2025-02-17 175812](https://github.com/user-attachments/assets/6a7ce6f4-0821-4970-8a1a-730c9599b5a7)
+# mini-project-
+FEEL - E-Commerce Mini Project
+Welcome to the FEEL E-Commerce Mini Project! This project demonstrates a simple e-commerce platform built using Python Flask for the backend and SQL for the database. Users can register, log in, browse products, add items to their cart, and make purchases.
